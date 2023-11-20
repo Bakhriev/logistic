@@ -1,0 +1,30 @@
+.dropdown {
+	&__toggle {
+		@include flex-center-vert;
+		gap: 10px;
+
+		color: var(--black, #141414);
+		font-family: Lato;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		text-transform: capitalize;
+	}
+
+	&__arrow {
+	}
+}
+
+.dropdown-menu {
+	display: none;
+	&__link {
+		color: var(--black, #141414);
+		font-family: Lato;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		text-transform: capitalize;
+	}
+}

@@ -1,0 +1,30 @@
+:root {
+	--black: #141414;
+	--white: #fff;
+
+	--simblue: #2c2d5b;
+	--simorange: #f67366;
+	--gray-50: #f4f6f9;
+	--gray-100: #979797;
+	--gray-200: #4f4f4f;
+	--gray-300: #333;
+}
+
+$burgerColor: #222;
+$burgerActiveColor: #222;
+
+$breakpoints: (
+	'xs': 400px,
+	'sm': 544px,
+	'md': 768px,
+	'lg': 992px,
+	'xl': 1280px,
+	'xxl': 1440px,
+);
+
+// z-index
+$burgerIndex: 4;
+$mobileMenuIndex: 3;
+$overlayIndex: 2;
+
+// Colors
