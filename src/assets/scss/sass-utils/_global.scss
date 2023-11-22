@@ -6,6 +6,7 @@ body {
 }
 
 .wrapper {
+	position: relative;
 	@include flex-column;
 	min-height: 100vh;
 	overflow: hidden;
@@ -90,4 +91,75 @@ body {
 	clip: rect(0, 0, 0, 0) !important;
 	white-space: nowrap !important;
 	border: 0 !important;
+}
+.main {
+	position: relative;
+}
+.spiral-container {
+	position: relative;
+}
+.spiral {
+	animation: rotate 10s linear infinite;
+	&_position {
+		position: absolute;
+		left: -539px;
+		top: -194px;
+	}
+
+	&__circle {
+		width: 896px;
+		height: 896px;
+		border-radius: 50%;
+		border: 1px solid #bcbded;
+	}
+	&__truck,
+	&__airplane {
+		display: grid;
+		place-items: center;
+		position: absolute;
+		&::before {
+			content: '';
+			width: 32px;
+			height: 32px;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: #fff;
+		box-shadow: 0px 0px 25px 0px rgba(151, 151, 151, 0.25);
+	}
+
+	&__truck {
+		top: 223px;
+		right: 22px;
+		animation: rotateReverse 10s linear infinite;
+
+		&::before {
+			background-image: url('../img/svg/truck.svg');
+		}
+	}
+
+	&__airplane {
+		bottom: -18px;
+		right: 374px;
+		animation: rotateReverse 10s linear infinite;
+
+		&::before {
+			background-image: url('../img/svg/plane.svg');
+		}
+	}
+}
+
+@keyframes rotate {
+	100% {
+		rotate: 360deg;
+	}
+}
+
+@keyframes rotateReverse {
+	100% {
+		rotate: -360deg;
+	}
 }

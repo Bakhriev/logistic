@@ -12,7 +12,17 @@
 
 		<div class="wrapper">
 			@include('assets/layout/sections/header.html')
-			<main class="main">@include('assets/layout/sections/hero.html')</main>
+			<main class="main">
+				<div class="spiral-container container">
+					<div class="spiral spiral_position">
+						<div class="spiral__circle"></div>
+						<div class="spiral__truck"></div>
+						<div class="spiral__airplane"></div>
+					</div>
+				</div>
+
+				@include('assets/layout/sections/hero.html')
+			</main>
 
 			@include('assets/layout/sections/footer.html')
 		</div>
