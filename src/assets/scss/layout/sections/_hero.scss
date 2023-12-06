@@ -19,6 +19,13 @@
 		}
 	}
 
+	&__top {
+		margin-bottom: 266px;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 0px;
+		}
+	}
+
 	&__content {
 		max-width: 600px;
 		width: 100%;
@@ -124,5 +131,31 @@
 	&__icon {
 		width: 23px;
 		height: 17px;
+	}
+}
+
+.calc {
+	padding: 36px;
+	border-radius: 30px;
+	background-color: var(--white, #fff);
+	box-shadow: 0px 0px 25px 0px rgba(151, 151, 151, 0.2);
+	transition: box-shadow 150ms linear;
+	width: 100%;
+
+	&:focus-within {
+		box-shadow: 0px 0px 25px 0px rgba(151, 151, 151, 0.4);
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 25px;
+	}
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		align-items: center;
+		gap: 22px;
+	}
+	&__btn {
+		padding: 28px;
 	}
 }

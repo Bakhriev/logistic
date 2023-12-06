@@ -11,10 +11,6 @@
 	line-height: normal;
 	text-transform: capitalize;
 
-	@media screen and (max-width: 1200px) {
-		padding: 15px 20px;
-	}
-
 	&:active {
 		scale: 0.97;
 	}

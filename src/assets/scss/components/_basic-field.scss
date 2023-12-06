@@ -1,0 +1,53 @@
+.basic-field {
+	position: relative;
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 16px;
+		transform: translateY(-50%);
+		width: 16px;
+		height: 16px;
+	}
+
+	&__title {
+		position: absolute;
+		z-index: 1;
+		top: -16px;
+		left: 16px;
+
+		padding: 8px;
+		background-color: var(--white, #fff);
+		color: var(--gray-100, #979797);
+		font-family: Graphik;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: normal;
+		text-transform: capitalize;
+	}
+
+	&__input {
+		padding: 24px 10px 24px 42px;
+		width: 100%;
+		border-radius: 12px;
+		border: 1px solid var(--gray-100, #979797);
+		background-color: var(--white, #fff);
+		color: var(--black);
+		font-family: Lato;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-transform: capitalize;
+
+		&::placeholder {
+			color: var(--text-2, #979797);
+		}
+		&:focus {
+			outline: 1px solid #000;
+		}
+	}
+
+	&__input:focus ~ .basic-field__title {
+		color: #000;
+	}
+}

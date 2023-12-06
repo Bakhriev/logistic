@@ -1,32 +1,67 @@
 <section class="hero">
 	<div class="container hero__container">
-		<div class="hero__content">
-			<h1 class="hero__title">
-				quick & reliable <span>warehousing and logistics</span> solution.
-			</h1>
-			<p class="hero__subtitle">
-				ShipUp delivers an unparalleled customer service through dedicated
-				customer teams, engaged people working in an agile culture, and a global
-				footprint
-			</p>
-			<div class="hero__actions">
-				<button class="btn btn-filled btn-reset">join now</button>
-				<button class="video-play-btn btn-reset">
-					<span class="video-play-btn__wrapper" aria-hidden="true">
-						<svg width="23" height="17" class="video-play-btn__icon">
-							<use href="./assets/img/svg/sprite.svg#video"></use>
-						</svg>
-					</span>
-					<span>play demo</span>
-				</button>
+		<div class="hero__top">
+			<div class="hero__content">
+				<h1 class="hero__title">
+					quick & reliable <span>warehousing and logistics</span> solution.
+				</h1>
+				<p class="hero__subtitle">
+					ShipUp delivers an unparalleled customer service through dedicated
+					customer teams, engaged people working in an agile culture, and a
+					global footprint
+				</p>
+				<div class="hero__actions">
+					<button class="btn btn-filled btn-reset">join now</button>
+					<button class="video-play-btn btn-reset">
+						<span class="video-play-btn__wrapper" aria-hidden="true">
+							<svg width="23" height="17" class="video-play-btn__icon">
+								<use href="./assets/img/svg/sprite.svg#video"></use>
+							</svg>
+						</span>
+						<span>play demo</span>
+					</button>
+				</div>
+			</div>
+			<img
+				width="700"
+				height="594"
+				src="./assets/img/courier.webp"
+				alt="courier"
+				class="hero__img"
+			/>
+		</div>
+		<div class="calc">
+			<div class="calc__inner">
+				<!-- prettier-ignore -->
+				@include('../components/basic-field.html', 
+					{ 
+						"title":"Origin",
+						"svg": "location",
+						"placeholder": "Enter Location",
+						"name": "location-origin"
+					})
+
+				<!-- prettier-ignore -->
+				@include('../components/basic-field.html',
+					{ 
+						"title":"Desitination",
+						"svg": "location",
+				 		"placeholder": "Enter Location",
+				  	"name":	"location-destination" 
+					})
+
+				<!-- prettier-ignore -->
+
+				@include('../components/basic-field.html', 
+					{ 
+						"title":"Weight", 
+						"svg": "bag",
+						"placeholder": "weight KG0",
+					 	"name": "weight" 
+					})
+
+				<button class="btn btn-filled btn-reset calc__btn">Check Price</button>
 			</div>
 		</div>
-		<img
-			width="700"
-			height="594"
-			src="./assets/img/courier.webp"
-			alt="courier"
-			class="hero__img"
-		/>
 	</div>
 </section>
