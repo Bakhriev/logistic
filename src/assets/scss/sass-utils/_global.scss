@@ -95,9 +95,26 @@ body {
 .main {
 	position: relative;
 }
+
+.title-border {
+	padding-bottom: 14px;
+	position: relative;
+	width: max-content;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 130px;
+		height: 4px;
+		background-color: var(--simorange, #f67366);
+	}
+}
+
 .spiral-container {
 	position: relative;
 }
+
 .spiral {
 	animation: rotate 10s linear infinite;
 	width: 896px;
@@ -123,7 +140,7 @@ body {
 		border-radius: 50%;
 		border: 1px solid #bcbded;
 	}
-	
+
 	&__truck,
 	&__airplane {
 		display: grid;

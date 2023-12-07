@@ -39,6 +39,10 @@
 		line-height: normal;
 		text-transform: capitalize;
 
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0),
+			inset 0 0 0 100px rgba(255, 255, 255, 1);
+
 		&::placeholder {
 			color: var(--text-2, #979797);
 		}

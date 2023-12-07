@@ -1,0 +1,43 @@
+.car-decor {
+	&__back,
+	&__front {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		@media screen and (max-width: 768px) {
+			width: 80px;
+			height: 80px;
+		}
+	}
+
+	&__back {
+		border-radius: 100px;
+		background-color: #f4f6f9;
+		box-shadow:
+			1px 1px 8px 0px #f4f6f9,
+			4px 4px 10px 0px #d8d8d8 inset,
+			-6px -5px 12px 0px #fafbfc inset;
+	}
+
+	&__front {
+		margin-top: -96px;
+		margin-left: -42px;
+		@media screen and (max-width: 768px) {
+			margin-top: -40px;
+			margin-left: -40px;
+		}
+		background-color: var(--white, #fff);
+		display: grid;
+		place-items: center;
+	}
+
+	&__icon {
+		width: 60px;
+		height: 60px;
+		fill: var(--simorange) !important;
+		@media screen and (max-width: 768px) {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
